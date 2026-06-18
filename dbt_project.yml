@@ -1,0 +1,11 @@
+name: snowflake_ci
+version: 1.0.0
+config-version: 2
+profile: snowflake_ci
+model-paths: ["models"]
+models:
+  snowflake_ci:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table
