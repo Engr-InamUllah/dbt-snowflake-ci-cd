@@ -1,0 +1,19 @@
+name: dbt-snowflake-ci-cd
+owner: Engr-InamUllah
+status: scaffold
+stack: 'Snowflake, dbt Core, SQL, GitHub Actions'
+pipeline:
+  - seed
+  - run
+  - test
+  - document
+  - deploy
+quality_gates:
+  - schema_validation
+  - null_thresholds
+  - duplicate_detection
+  - freshness_check
+  - automated_tests
+security:
+  secrets: environment_or_secret_store
+  least_privilege: true
