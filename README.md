@@ -1,2 +1,40 @@
-# dbt-snowflake-ci-cd
-Production-style dbt and Snowflake analytics engineering project with CI/CD.
+# dbt Snowflake CI/CD
+
+An analytics-engineering project featuring layered dbt models, tests, documentation, and a pull-request CI workflow for Snowflake.
+
+## Architecture
+
+`	ext
+Raw Snowflake -> staging -> intermediate -> marts -> BI
+`
+
+## Technology stack
+
+Snowflake, dbt Core, SQL, GitHub Actions
+
+## Repository blueprint
+
+- project.yaml — scope, pipeline stages, and quality expectations
+- src/ — ingestion and transformation implementation
+- 	ests/ — unit, integration, and data-quality tests
+- docs/ — architecture decisions and operational guidance
+
+## Implementation roadmap
+
+1. Create representative source data and document its contract.
+2. Implement the pipeline stages with idempotent processing.
+3. Add automated schema, null, duplicate, and business-rule checks.
+4. Capture run metadata, rejected records, and performance metrics.
+5. Add CI validation and publish screenshots or sample outputs.
+
+## Definition of done
+
+- Reproducible setup with no embedded credentials
+- Incremental and restart-safe processing
+- Automated tests and documented quality thresholds
+- Observable runs with clear failure handling
+- Architecture diagram and demonstration results
+
+## Status
+
+Portfolio scaffold created. Implementation milestones are tracked in the roadmap above.
